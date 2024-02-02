@@ -1,0 +1,38 @@
+﻿@page
+@model vosplzen.sem2._2023k.Pages.StationPages.CreateModel
+@{
+}
+
+<h1>Stations - Create</h1>
+<hr />
+
+<form id="createForm" method="post">
+
+    <div class="form-group">
+        <label asp-for="Station.Title" class="control-label"></label>
+        <input asp-for="Station.Title" class="form-control" />
+        <span asp-validation-for="Station.Title" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Station.FloodLevel" class="control-label"></label>
+        <input asp-for="Station.FloodLevel" class="form-control" />
+        <span asp-validation-for="Station.FloodLevel" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Station.DroughtLevel" class="control-label"></label>
+        <input asp-for="Station.DroughtLevel" class="form-control" />
+        <span asp-validation-for="Station.DroughtLevel" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Station.TimeOutInMinutes" class="control-label"></label>
+        <input asp-for="Station.TimeOutInMinutes" class="form-control" />
+        <span asp-validation-for="Station.TimeOutInMinutes" class="text-danger"></span>
+    </div>
+
+    <button class="btn btn-primary mt-3" type="submit">Send</button>
+
+
+</form>
