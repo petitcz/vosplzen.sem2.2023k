@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using vosplzen.sem2._2023k.Data;
 using vosplzen.sem2._2023k.Data.Model;
+using vosplzen.sem2._2023k.Services;
+using static System.Collections.Specialized.BitVector32;
 
 namespace vosplzen.sem2._2023k.Pages.StationPages
 {
@@ -11,19 +13,23 @@ namespace vosplzen.sem2._2023k.Pages.StationPages
         [BindProperty]
         public Station Station { get; set; }
 
-        private ApplicationDbContext _context;
+        private IStationService _stationservice;
 
-        public CreateModel(ApplicationDbContext context)
+        public CreateModel(IStationService stationservice)
         {
             Station = new Station();
-            _context = context;
+            _stationservice = stationservice;
         }
 
         public IActionResult OnPost()
         {
-            _context.Stations.Add(Station);
-            _context.SaveChanges();
+            if(!ModelState.IsValid)
+            {
+                return Page();
+            }
 
+            _stationservice.AddStation(Station);
+        
             return RedirectToPage("./Index");
         }
     }
