@@ -12,7 +12,7 @@ namespace vosplzen.sem2._2023.apiClient.Contracts
 
         public int StationId { get; set; }
 
-        public DateTime DateTime { get; set; }
+        public DateTime TimeStamp { get; set; }
 
         public int Value { get; set; }  
 
