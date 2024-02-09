@@ -30,12 +30,7 @@ namespace vosplzen.sem2._2023.apiClient
                 Console.WriteLine(json);
 
                 var data = new StringContent(json, Encoding.UTF8, "application/json");
-
-                //var request = new HttpRequestMessage(HttpMethod.Post, );
-                //request.Headers.Add("Authorization", authToken);                
-                //request.Content = data;              
-
-                //httpClient.DefaultRequestHeaders.Add("Content-Type", "application/json");
+                                httpClient.DefaultRequestHeaders.Add("Content-Type", "application/json");
                 httpClient.DefaultRequestHeaders.Add("Authorization", authToken);
 
                 var response = await httpClient.PostAsync($@"{baseurl}", data);
