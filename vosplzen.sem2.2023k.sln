@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "vosplzen.sem2.2023k", "vosplzen.sem2.2023k\vosplzen.sem2.2023k.csproj", "{6B0FD73A-E0A5-486C-81F4-85163F66CAFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vosplzen.sem2.2023.apiClient", "vosplzen.sem2.2023.apiClient\vosplzen.sem2.2023.apiClient.csproj", "{F7705CC3-DBA6-4819-9095-9FFA146B71D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6B0FD73A-E0A5-486C-81F4-85163F66CAFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B0FD73A-E0A5-486C-81F4-85163F66CAFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B0FD73A-E0A5-486C-81F4-85163F66CAFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7705CC3-DBA6-4819-9095-9FFA146B71D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7705CC3-DBA6-4819-9095-9FFA146B71D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7705CC3-DBA6-4819-9095-9FFA146B71D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7705CC3-DBA6-4819-9095-9FFA146B71D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
