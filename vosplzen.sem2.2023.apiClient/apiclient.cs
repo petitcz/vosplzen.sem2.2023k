@@ -38,7 +38,7 @@ namespace vosplzen.sem2._2023.apiClient
                 //httpClient.DefaultRequestHeaders.Add("Content-Type", "application/json");
                 httpClient.DefaultRequestHeaders.Add("Authorization", authToken);
 
-                var response = await httpClient.PostAsync($@"{baseurl}/purchaseOrder/add", data);
+                var response = await httpClient.PostAsync($@"{baseurl}", data);
 
                 if (response.IsSuccessStatusCode)
                 {
