@@ -23,7 +23,7 @@ namespace vosplzen.sem2._2023.apiClient
             try
             {
 
-                var settings = new Newtonsoft.Json.JsonSerializerSettings() { Culture = new CultureInfo("en-US") };
+                var settings = new Newtonsoft.Json.JsonSerializerSettings() { Culture = new CultureInfo("cs-CZ") };
                 var json = Newtonsoft.Json.JsonConvert.SerializeObject(message, Formatting.Indented, settings);
 
                 Console.WriteLine("message:");
