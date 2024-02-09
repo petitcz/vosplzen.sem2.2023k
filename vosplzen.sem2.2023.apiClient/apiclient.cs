@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -23,7 +24,11 @@ namespace vosplzen.sem2._2023.apiClient
             {
 
                 var settings = new Newtonsoft.Json.JsonSerializerSettings() { Culture = new CultureInfo("en-US") };
-                var json = Newtonsoft.Json.JsonConvert.SerializeObject(message, settings);
+                var json = Newtonsoft.Json.JsonConvert.SerializeObject(message, Formatting.Indented, settings);
+
+                Console.WriteLine("message:");
+                Console.WriteLine(json);
+
                 var data = new StringContent(json, Encoding.UTF8, "application/json");
 
                 //var request = new HttpRequestMessage(HttpMethod.Post, );
