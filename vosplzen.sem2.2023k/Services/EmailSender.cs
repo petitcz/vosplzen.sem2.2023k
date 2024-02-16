@@ -28,8 +28,9 @@ namespace vosplzen.sem2._2023k.Services
 
                     try
                     {
-                        using (var smtp = new SmtpClient("smtp.forpsi.cz", 587))
+                        using (var smtp = new SmtpClient("{serverurl}", 587))
                         {
+                            smtp.Port = 587;
                             smtp.Credentials = new NetworkCredential("{uz.jmeno}", "{heslo}");
                             smtp.EnableSsl = true;
                             await smtp.SendMailAsync(mail);
@@ -38,6 +39,7 @@ namespace vosplzen.sem2._2023k.Services
                     catch (Exception ex)
                     {
                         _log.LogError(ex.Message, ex);
+                        throw;
                     }
 
                 }
