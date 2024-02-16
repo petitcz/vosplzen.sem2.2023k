@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using vosplzen.sem2._2023k.Services;
 
 namespace vosplzen.sem2._2023k.Pages
 {
@@ -14,6 +15,8 @@ namespace vosplzen.sem2._2023k.Pages
 
         public void OnGet()
         {
+            Hangfire.BackgroundJob.Enqueue<EmailSender>(x => x.SendEmailAsync("pbohac@windowslive.com","body","body"));
+
         }
     }
 }
