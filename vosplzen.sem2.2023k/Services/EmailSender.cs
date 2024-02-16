@@ -19,7 +19,7 @@ namespace vosplzen.sem2._2023k.Services
             {
                 using (var mail = new MailMessage())
                 {
-                    mail.From = new MailAddress("petr.bohac@codeclimber.cz");
+                    mail.From = new MailAddress("{email from}");
                     mail.To.Add(recipient);
                     mail.Subject = subject;
                     mail.Body = body;
