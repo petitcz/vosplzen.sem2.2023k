@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+
 using System.Net;
 using vosplzen.sem2._2023k.Data;
 using vosplzen.sem2._2023k.Data.Migrations;
 using vosplzen.sem2._2023k.Data.Model;
+using vosplzen.sem2._2023k.Filters;
 
 namespace vosplzen.sem2._2023k.Controllers
 {
@@ -18,10 +21,13 @@ namespace vosplzen.sem2._2023k.Controllers
             _context = context;
         }
 
+        [TokenAuthorizationFilter]
         [HttpGet]
         [Route("get-stations")]
         public IActionResult GetListOfStations()
         {
+
+ 
             var list = _context.Stations.ToList();
             return StatusCode(200, new JsonResult(list));
 
